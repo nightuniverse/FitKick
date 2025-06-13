@@ -9,12 +9,13 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: #333;
+    background-color: #f8f8f8;
 }
 
 /* Header and Navigation */
 header {
     background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
     top: 0;
@@ -33,7 +34,7 @@ nav {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #2ecc71;
+    color: #ff6b35;
 }
 
 .nav-links {
@@ -47,15 +48,18 @@ nav {
     color: #333;
     font-weight: 500;
     transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
 }
 
 .nav-links a:hover {
-    color: #2ecc71;
+    color: #ff6b35;
+    background-color: rgba(255, 107, 53, 0.1);
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -72,6 +76,7 @@ nav {
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hero p {
@@ -81,30 +86,33 @@ nav {
 
 .cta-button {
     background-color: white;
-    color: #2ecc71;
+    color: #ff6b35;
     border: none;
     padding: 1rem 2rem;
     font-size: 1.1rem;
     font-weight: 600;
     border-radius: 50px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 /* Features Section */
 .features {
     padding: 5rem 2rem;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
 }
 
 .features h2 {
     text-align: center;
     margin-bottom: 3rem;
     font-size: 2.5rem;
+    color: #333;
 }
 
 .features-grid {
@@ -118,17 +126,19 @@ nav {
 .feature-card {
     background: white;
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .feature-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
 
 .feature-card h3 {
-    color: #2ecc71;
+    color: #ff6b35;
     margin-bottom: 1rem;
 }
 
@@ -195,7 +205,7 @@ nav {
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #2c2c2c;
     color: white;
     padding: 3rem 2rem 1rem;
 }
@@ -211,7 +221,7 @@ footer {
 
 .footer-section h4 {
     margin-bottom: 1rem;
-    color: #2ecc71;
+    color: #ff6b35;
 }
 
 .footer-section ul {
@@ -229,7 +239,7 @@ footer {
 }
 
 .footer-section a:hover {
-    color: #2ecc71;
+    color: #ff8c42;
 }
 
 .social-links {
@@ -253,23 +263,59 @@ footer {
         font-size: 2.5rem;
     }
     
-    .features-grid {
+    .features-grid,
+    .pricing-grid,
+    .workout-grid {
         grid-template-columns: 1fr;
     }
     
-    .footer-content {
+    .pricing-card.featured {
+        transform: none;
+    }
+    
+    .category-filters {
+        padding: 0 1rem;
+    }
+    
+    .filter-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .dashboard {
         grid-template-columns: 1fr;
+    }
+    
+    .dashboard-sidebar {
+        display: none;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .workout-card {
+        flex-direction: column;
         text-align: center;
+        gap: 1rem;
     }
     
-    .social-links {
-        justify-content: center;
+    .start-workout {
+        width: 100%;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-form button {
+        width: 100%;
     }
 }
 
 /* Pricing Page Styles */
 .pricing-hero {
-    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
     padding: 8rem 2rem 4rem;
     text-align: center;
     color: white;
@@ -291,10 +337,11 @@ footer {
 
 .pricing-card {
     background: white;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 2rem;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .pricing-card:hover {
@@ -302,7 +349,7 @@ footer {
 }
 
 .pricing-card.featured {
-    border: 2px solid #2ecc71;
+    border: 2px solid #ff6b35;
     transform: scale(1.05);
 }
 
@@ -318,7 +365,7 @@ footer {
 .amount {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #2ecc71;
+    color: #ff6b35;
 }
 
 .period {
@@ -338,25 +385,27 @@ footer {
 
 .features-list li::before {
     content: "✓";
-    color: #2ecc71;
+    color: #ff6b35;
     position: absolute;
     left: 0;
 }
 
 .pricing-button {
-    width: 100%;
-    padding: 1rem;
-    background-color: #2ecc71;
+    background-color: #ff6b35;
     color: white;
     border: none;
-    border-radius: 5px;
+    padding: 1rem;
+    border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
 }
 
 .pricing-button:hover {
-    background-color: #27ae60;
+    background-color: #ff8c42;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 107, 53, 0.3);
 }
 
 /* FAQ Section */
@@ -392,7 +441,7 @@ footer {
 
 /* Workouts Page Styles */
 .workouts-hero {
-    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
     padding: 8rem 2rem 4rem;
     text-align: center;
     color: white;
@@ -413,18 +462,20 @@ footer {
 
 .filter-button {
     padding: 0.5rem 1.5rem;
-    border: 2px solid #2ecc71;
+    border: 2px solid #ff6b35;
     background: transparent;
-    color: #2ecc71;
+    color: #ff6b35;
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 .filter-button.active,
 .filter-button:hover {
-    background: #2ecc71;
+    background: #ff6b35;
     color: white;
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
 }
 
 .workout-grid {
@@ -438,10 +489,11 @@ footer {
 
 .workout-card {
     background: white;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .workout-card:hover {
@@ -459,7 +511,7 @@ footer {
 }
 
 .workout-content h3 {
-    color: #2ecc71;
+    color: #ff6b35;
     margin-bottom: 0.5rem;
 }
 
@@ -474,19 +526,21 @@ footer {
 }
 
 .workout-button {
-    width: 100%;
-    padding: 0.8rem;
-    background-color: #2ecc71;
+    background-color: #ff6b35;
     color: white;
     border: none;
-    border-radius: 5px;
+    padding: 0.8rem;
+    border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
 }
 
 .workout-button:hover {
-    background-color: #27ae60;
+    background-color: #ff8c42;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 107, 53, 0.3);
 }
 
 .workout-features {
@@ -501,34 +555,14 @@ footer {
 
 /* Active Navigation Link */
 .nav-links a.active {
-    color: #2ecc71;
+    color: #ff6b35;
     font-weight: 600;
-}
-
-/* Responsive Design Updates */
-@media (max-width: 768px) {
-    .pricing-grid,
-    .workout-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .pricing-card.featured {
-        transform: none;
-    }
-
-    .category-filters {
-        padding: 0 1rem;
-    }
-
-    .filter-button {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-    }
+    background-color: rgba(255, 107, 53, 0.1);
 }
 
 /* Blog Page Styles */
 .blog-hero {
-    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
     padding: 8rem 2rem 4rem;
     text-align: center;
     color: white;
@@ -550,10 +584,11 @@ footer {
 
 .blog-card {
     background: white;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .blog-card:hover {
@@ -589,7 +624,7 @@ footer {
 }
 
 .category {
-    color: #2ecc71;
+    color: #ff6b35;
     font-weight: 500;
 }
 
@@ -610,7 +645,7 @@ footer {
 }
 
 .read-more {
-    color: #2ecc71;
+    color: #ff6b35;
     text-decoration: none;
     font-weight: 500;
     display: inline-block;
@@ -618,7 +653,7 @@ footer {
 }
 
 .read-more:hover {
-    color: #27ae60;
+    color: #ff8c42;
 }
 
 /* Newsletter Section */
@@ -657,18 +692,21 @@ footer {
 }
 
 .newsletter-form button {
-    padding: 1rem 2rem;
-    background-color: #2ecc71;
+    background-color: #ff6b35;
     color: white;
     border: none;
-    border-radius: 5px;
+    padding: 1rem 2rem;
+    border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
 }
 
 .newsletter-form button:hover {
-    background-color: #27ae60;
+    background-color: #ff8c42;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 107, 53, 0.3);
 }
 
 /* Responsive Blog Design */
@@ -748,7 +786,7 @@ footer {
 
 .dashboard-nav a:hover,
 .dashboard-nav a.active {
-    background-color: #2ecc71;
+    background-color: #ff6b35;
     color: white;
 }
 
@@ -787,7 +825,7 @@ footer {
 .stat-value {
     font-size: 2rem;
     font-weight: 600;
-    color: #2ecc71;
+    color: #ff6b35;
     margin-bottom: 1rem;
 }
 
@@ -800,7 +838,7 @@ footer {
 
 .progress {
     height: 100%;
-    background-color: #2ecc71;
+    background-color: #ff6b35;
     border-radius: 3px;
 }
 
@@ -832,17 +870,20 @@ footer {
 
 .start-workout {
     padding: 0.8rem 1.5rem;
-    background-color: #2ecc71;
+    background-color: #ff6b35;
     color: white;
     border: none;
     border-radius: 5px;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
 }
 
 .start-workout:hover {
-    background-color: #27ae60;
+    background-color: #ff8c42;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 107, 53, 0.3);
 }
 
 .recent-activity {
@@ -921,4 +962,18 @@ footer {
     .start-workout {
         width: 100%;
     }
+}
+
+/* Form Elements */
+input, textarea {
+    border: 2px solid #eee;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #ff6b35;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
 } 
